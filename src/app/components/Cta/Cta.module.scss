@@ -1,0 +1,49 @@
+@import "../../../styles/root.module.scss";
+
+$cta-bg: $color-primary;
+$cta-text-color: $color-primary-foreground;
+$cta-padding: 3.25rem 0;
+$cta-radius: $radius;
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $cta-bg;
+  color: $cta-text-color;
+  padding: $cta-padding;
+  position: relative;
+  overflow: hidden;
+ 
+  &__content {
+     max-width: calc( $max-width-container - 20rem);
+     margin: auto;
+     width: 100%;
+     padding: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__subtitle {
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &__button {
+    text-decoration: none;
+    margin-left: auto;
+  }
+
+    
+}
+

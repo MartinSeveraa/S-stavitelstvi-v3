@@ -1,0 +1,182 @@
+// root.module.scss
+
+$max-width-container: 1660px;
+
+// Typography
+$font-size: 16px;
+$font-weight-medium: 500;
+$font-weight-normal: 400;
+
+// Radius
+$radius: 0.625rem;
+
+// Spacing
+$spacing-section: 100px;
+
+// Colors – light mode
+$color-background: #ffffff;
+$color-foreground: #111111;
+
+$color-white: #ffffff;
+
+$color-primary: #CC0000;
+$color-primary-foreground: #ffffff;
+
+$color-secondary: #f5f5f5;
+$color-secondary-foreground: #111111;
+
+$color-accent: #d40000;
+$color-accent-foreground: #ffffff;
+
+$color-muted: #f5f5f5;
+$color-muted-foreground: #a5a5a5;
+
+$color-border: #eeeeee;
+$color-input-background: #f3f3f5;
+
+$color-destructive: #d4183d;
+$color-destructive-foreground: #ffffff;
+
+$color-ring: #ce2123;
+
+// Colors – dark mode
+$dark-color-background: #111111;
+$dark-color-foreground: #ffffff;
+
+$dark-color-primary: #ce2123;
+$dark-color-primary-foreground: #ffffff;
+
+$dark-color-secondary: #1a1a1a;
+$dark-color-secondary-foreground: #ffffff;
+
+$dark-color-accent: #d40000;
+$dark-color-accent-foreground: #ffffff;
+
+$dark-color-muted: #1a1a1a;
+$dark-color-muted-foreground: #888888;
+
+$dark-color-border: #2a2a2a;
+$dark-color-input-background: #1f1f1f;
+
+$dark-color-ring: #ce2123;
+
+// Proměnné
+$button-padding-y: 0.9rem;
+$button-padding-x: 1.8rem;
+$button-font-family: inherit;
+$button-font-size: 1rem;
+$button-font-weight: 600;
+$button-transition: all 0.25s ease;
+
+$button-disabled-opacity: 0.6;
+$button-disabled-cursor: not-allowed;
+
+// DEFAULT
+$button-default-bg: #111;
+$button-default-color: #fff;
+$button-default-hover-bg: #000;
+
+// CTA
+$button-cta-bg: #ce2123;
+$button-cta-color: #fff;
+$button-cta-box-shadow: 0 10px 25px rgba(206, 33, 35, 0.3);
+$button-cta-hover-bg: #a51a1c;
+$button-cta-hover-box-shadow: 0 15px 35px rgba(206, 33, 35, 0.4);
+$button-cta-hover-transform: translateY(-2px);
+
+// INVERSE
+$button-inverse-bg: #fff;
+$button-inverse-color: #ce2123;
+$button-inverse-border: 2px solid #ce2123;
+$button-inverse-hover-bg: #fff;
+$button-inverse-hover-color: #a61a1d;
+
+// Styles
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $button-padding-y $button-padding-x;
+  font-family: $button-font-family;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  border: none;
+  cursor: pointer;
+  transition: $button-transition;
+  text-decoration: none;
+  width: fit-content;
+
+  &:disabled {
+    opacity: $button-disabled-opacity;
+    cursor: $button-disabled-cursor;
+  }
+
+  // DEFAULT
+  &--default {
+    background: $button-default-bg;
+    color: $button-default-color;
+
+    &:hover {
+      background: $button-default-hover-bg;
+    }
+  }
+
+  // CTA
+  &--cta {
+    background: $button-cta-bg;
+    color: $button-cta-color;
+    box-shadow: $button-cta-box-shadow;
+
+    &:hover {
+      background: $button-cta-hover-bg;
+      box-shadow: $button-cta-hover-box-shadow;
+      transform: $button-cta-hover-transform;
+    }
+  }
+
+  // INVERSE
+  &--inverse {
+    background: $button-inverse-bg;
+    color: $button-inverse-color;
+    border: $button-inverse-border;
+
+    &:hover {
+      background: $button-inverse-hover-bg;
+      color: $button-inverse-hover-color;
+    }
+  }
+}
+
+// Mixin pro dark mode
+@mixin dark-mode {
+  body.dark & {
+    @content;
+  }
+}
+
+// Base styles
+html {
+  font-size: $font-size;
+}
+
+body {
+  background: $color-background;
+  color: $color-foreground;
+  font-weight: $font-weight-normal;
+}
+
+h1 { font-size: 2rem; font-weight: $font-weight-medium; line-height: 1.4; }
+h2 { font-size: 1.75rem; font-weight: $font-weight-medium; line-height: 1.4; }
+h3 { font-size: 1.5rem; font-weight: $font-weight-medium; line-height: 1.4; }
+h4 { font-size: 1.25rem; font-weight: $font-weight-medium; line-height: 1.4; }
+
+label, button { font-size: 1rem; font-weight: $font-weight-medium; }
+input { font-size: 1rem; font-weight: $font-weight-normal; }
+
+// mixin pro dark mode
+@mixin dark-mode {
+  // & se vynechá, mixin očekává, že ho použiješ uvnitř selektoru
+  body.dark {
+    @content;
+  }
+}

@@ -25,7 +25,9 @@ const Hero = () => {
         </h1>
 
         <p className={styles.hero__text}>
-          S-Stavitelství nabízí komplexní stavební služby...
+          S-Stavitelství nabízí komplexní stavební služby – od hrubé
+stavby po dokončovací práce. Kvalita, spolehlivost a tradice
+od roku 2004.
         </p>
 
         <Button variant="inverse">

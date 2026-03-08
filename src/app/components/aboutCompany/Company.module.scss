@@ -1,0 +1,134 @@
+@import "../../../styles/root.module.scss";
+
+.company {
+  padding: $spacing-section 0;
+  background: $color-secondary;
+}
+
+.container {
+  max-width: $max-width-container;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.left {
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.experience {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  background: $color-primary;
+  color: $color-white;
+  padding: 25px 30px;
+  text-align: center;
+}
+
+.number {
+  font-size: 24px;
+  font-weight: 700;
+  display: block;
+  line-height: 1;
+}
+
+.experience .text {
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: 6px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+.overTitle {
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: $color-primary;
+  font-weight: 600;
+  margin: 0 0 10px 20px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 3px;
+    background: $color-primary;
+    margin-right: 16px;
+    vertical-align: middle;
+  }
+}
+
+.title {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+
+  span {
+    color: $color-primary;
+  }
+}
+
+.lead {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: $dark-color-secondary;
+}
+
+.text {
+  font-size: 16px;
+  color: $color-muted;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.text_reverse {
+  font-size: 16px;
+  color: $dark-color-muted;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 40px;
+  margin: 30px 0;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: $dark-color-secondary;
+}
+
+.features li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: $color-primary;
+  font-size: 14px;
+  font-weight: bold;
+}

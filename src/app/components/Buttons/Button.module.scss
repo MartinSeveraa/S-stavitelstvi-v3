@@ -1,3 +1,6 @@
+
+@import "../../../styles/root.module.scss";
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -29,7 +32,7 @@
 
   /* CTA */
   &--cta {
-    background: #ce2123;
+    background:  $color-primary;
     color: #fff;
     box-shadow: 0 10px 25px rgba(206, 33, 35, 0.3);
 
@@ -44,7 +47,6 @@
   &--inverse {
     background: #fff;
     color: #ce2123;
-    border: 2px solid #ce2123;
 
     &:hover {
       background: #fff;
