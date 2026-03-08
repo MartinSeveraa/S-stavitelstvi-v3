@@ -1,5 +1,5 @@
 
-@import "../../../styles/root.module.scss";
+@use "../../../styles/root.module.scss" as *;
 
 .button {
   display: inline-flex;
