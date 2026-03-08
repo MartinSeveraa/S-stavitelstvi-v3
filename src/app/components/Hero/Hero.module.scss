@@ -1,0 +1,84 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+
+  /* Background */
+  background-image: url("../../../assets/images/hero.jpg");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+
+  /* Gradient overlay */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 60%;
+    background: linear-gradient(135deg, #c40000, #e10600);
+    clip-path: polygon(0 0, 90% 0, 70% 100%, 0% 100%);
+    z-index: 1;
+  }
+
+  /* Container zarovnaný s headerem */
+  &__container {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+  }
+
+  /* Textová část */
+  &__content {
+    max-width: 700px;
+  }
+
+  &__logoWrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    &::before {
+      content: "";
+      width: 40px;
+      height: 2px;
+      background: #ffffff;
+    }
+  }
+
+  &__logoImg {
+    height: 42px;
+    width: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+  }
+
+  &__subtitle {
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 1.1;
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  &__text {
+    margin-top: 2rem;
+    max-width: 500px;
+    font-size: 1.1rem;
+  }
+}

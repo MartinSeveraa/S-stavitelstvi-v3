@@ -1,0 +1,123 @@
+🏗️ STACK
+Frontend
+
+React 18 + Vite
+
+TypeScript (strict mode)
+
+React Router
+
+Axios
+
+SCSS (modulárně)
+
+Bootstrap 5 (jen utility)
+
+Backend
+
+Node.js (LTS)
+
+Express
+
+TypeScript
+
+Prisma ORM
+
+PostgreSQL
+
+📁 ARCHITEKTURA
+Frontend
+src/
+ ├── components/
+ ├── pages/
+ ├── services/
+ ├── hooks/
+ ├── types/
+ ├── router/
+ └── styles/
+Backend
+src/
+ ├── controllers/
+ ├── routes/
+ ├── services/
+ ├── middleware/
+ ├── prisma/
+ └── types/
+📌 PRAVIDLA
+Obecné
+
+Používej TypeScript
+
+Dodržuj clean architecture
+
+Odděluj logiku od prezentace
+
+Piš produkční kód (ne ukázkový)
+
+Frontend
+
+Funkcionální komponenty + hooks
+
+Žádná business logika v JSX
+
+API volání pouze v services
+
+Žádný inline CSS
+
+Props vždy typuj přes interface
+
+Backend
+
+Controller = request/response
+
+Business logika = services
+
+Používej async/await
+
+Ošetřuj chyby
+
+Správné HTTP status kódy
+
+Databáze
+
+PostgreSQL
+
+Prisma migrace
+
+Každý model má:
+
+id (UUID)
+
+createdAt
+
+updatedAt
+
+🔐 BEZPEČNOST
+
+bcrypt pro hesla
+
+JWT autentizace
+
+Validace vstupů
+
+.env mimo git
+
+📦 API
+
+REST API
+
+Prefix /api
+
+Axios instance s baseURL
+
+JWT přes interceptor
+
+📌 INSTRUKCE PRO GENEROVÁNÍ
+
+Piš pouze relevantní kód
+
+Dodrž strukturu projektu
+
+Používej best practices
+
+Nepřidávej zbytečné vysvětlování, pokud není požadováno
