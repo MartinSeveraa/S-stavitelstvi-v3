@@ -4,6 +4,7 @@ import svgr from 'vite-plugin-svgr'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/S-stavitelstvi-v3/',
   plugins: [
     react(),
     svgr()

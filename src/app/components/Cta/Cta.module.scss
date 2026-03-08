@@ -1,4 +1,4 @@
-@import "../../../styles/root.module.scss";
+@use "../../../styles/root.module.scss" as *;
 
 $cta-bg: $color-primary;
 $cta-text-color: $color-primary-foreground;

@@ -1,4 +1,4 @@
-@import "../../../styles/root.module.scss";
+@use "../../../styles/root.module.scss" as *;
 
 .usp {
   width: 100%;
